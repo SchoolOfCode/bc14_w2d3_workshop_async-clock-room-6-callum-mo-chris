@@ -1,3 +1,13 @@
 const hand = document.querySelector(".hand");
+let angle = 0
+let intervalId = setInterval(handMove, 1000);
 
-hand.style.transform = `rotate(90deg)`; //🔍 HINT: THis is an example of how to rotate the hand!
+function handMove(){
+    angle += 30
+    hand.style.transform = `rotate(${angle}deg)`;
+    if(angle === 360){
+        clearInterval(intervalId);}
+    return
+    }
+
+
